@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DialogConfirm from '@/components/DialogConfirm.vue'
-import type { DataTableHeaders } from '@/plugins/vuetify'
+import type { DataTableHeader } from 'vuetify'
 
 definePage({
   meta: {
@@ -28,7 +28,7 @@ function showDialogDelete(name: string) {
     })
 }
 
-const headers: DataTableHeaders = [
+const headers: DataTableHeader[] = [
   {
     title: 'Dessert (100g serving)',
     key: 'name',
@@ -137,23 +137,23 @@ const desserts = ref([
     <v-row>
       <v-col>
         <v-card>
-          <client-only>
-            <teleport to="#app-bar">
-              <v-text-field
-                v-model="search"
-                prepend-inner-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-                density="compact"
-                class="mr-2"
-                rounded="xl"
-                flat
-                variant="solo"
-                style="width: 250px"
-              />
-            </teleport>
-          </client-only>
+          <teleport to="#app-bar">
+            <v-text-field
+              v-model="search"
+              prepend-inner-icon="mdi-magnify"
+              label="Search"
+              single-line
+              hide-details
+              density="compact"
+              class="mr-2"
+              rounded="xl"
+              flat
+              icon-color
+              glow
+              variant="solo"
+              style="width: 250px"
+            />
+          </teleport>
           <v-data-table
             :headers="headers"
             :items="desserts"

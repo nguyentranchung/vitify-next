@@ -31,7 +31,7 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
         <v-list-item class="pa-1">
           <template #prepend>
             <v-icon
-              icon="custom:vitify"
+              icon="custom:logo"
               size="x-large"
               class="drawer-header-icon"
               color="primary"

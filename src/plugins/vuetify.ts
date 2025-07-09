@@ -1,8 +1,9 @@
-import 'vuetify/styles'
+import type { IconProps } from '@iconify/vue'
+import { Icon } from '@iconify/vue'
 import { createVuetify } from 'vuetify'
 import { md3 } from 'vuetify/blueprints'
 import type { VDataTable } from 'vuetify/lib/components/index.mjs'
-import { Icon, type IconProps } from '@iconify/vue'
+import 'vuetify/styles'
 export type DataTableHeaders = InstanceType<
   typeof VDataTable
 >['$props']['headers']
